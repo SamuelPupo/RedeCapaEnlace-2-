@@ -1,0 +1,4 @@
+time=2080, host_mac=FFFF, data=A6F43400FFB34E, state=OK
+time=4450, host_mac=F2D2, data=D3, state=OK
+time=7570, host_mac=C5D6, data=C3, state=OK
+time=9350, host_mac=F2D2, data=D4, state=OK

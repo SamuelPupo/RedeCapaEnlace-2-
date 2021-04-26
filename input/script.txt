@@ -1,0 +1,33 @@
+0 create hub h 4
+0 create host pc
+10 create host cp
+800 mac pc A4B5
+980 connect pc_1 cp_1
+990 send_frame pc FFFF A6F43400FFB34E
+1000 send_frame cp A4B5 A6F43400FFB34E
+1010 send_frame pc A4B5 B5
+3050 create switch sw 4
+3602 connect pc_1 sw_1
+3610 connect sw_2 cp_1
+3620 mac cp F2D2
+3625 create host pp
+3626 connect pp_1 sw_3
+3630 send_frame pc F2D2 C4
+3700 send_frame cp A4B5 D3
+4400 send_frame pc F2D2 E2
+4415 mac pp C5D6
+4800 send_frame pp F2D2 F1
+5650 send_frame pp C5D6 A0
+6363 connect h_1 sw_4
+6364 connect h_2 pc_1
+6365 send_frame pc C5D6 B1
+6600 send_frame pp A4B5 C3
+8600 send_frame cp FFFF D4
+9610 disconnect sw_2
+9611 create switch ws 3
+9612 connect ws_1 cp_1
+9619 connect ws_2 sw_2
+9620 send_frame pc FFFF A0
+9900 disconnect cp_1
+10000 connect cp_1 ws_1
+10100 disconnect pc_1
