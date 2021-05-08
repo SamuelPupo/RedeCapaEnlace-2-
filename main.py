@@ -28,6 +28,7 @@ def main():
                 elif line[0] == "error_detection":
                     error_detection = line[1].lower()
                 else:
+                    print("WRONG CONFIG INSTRUCTION.")
                     raise Exception
         except Exception:
             print("\nCONFIG FORMAT ERROR.\n")

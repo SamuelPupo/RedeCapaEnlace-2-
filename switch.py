@@ -4,8 +4,9 @@ from converter import binary_to_decimal, binary_to_hexadecimal
 
 
 class Switch(Device):
-    def __init__(self, name: str, no_ports: int):
+    def __init__(self, signal_time: int, name: str, no_ports: int):
         super().__init__(name, no_ports)
+        self.signal_time = signal_time
         self.macs_map = dict()
         self.receiving_data = [[[[] for _ in range(6)]] for _ in range(self.ports_number)]
         self.receiving_data_pointer = [[0, 0, 0] for _ in range(self.ports_number)]
@@ -84,17 +85,17 @@ class Switch(Device):
         self.receiving_data_pointer[port][1] = 0
         self.receiving_data_pointer[port][2] = 0
 
-    def send(self, signal_time: int, time: int):
+    def send(self, time: int):
         sent = False
         for port in range(len(self.ports)):
-            if self.send_port(signal_time, time, port):
+            if self.send_port(time, port):
                 sent = True
         return sent
 
-    def send_port(self, signal_time: int, time: int, port: int):
+    def send_port(self, time: int, port: int):
         if self.transmitting_started[port] == -1:
             return False
-        if (time - self.transmitting_started[port]) % signal_time != 0:
+        if (time - self.transmitting_started[port]) % self.signal_time != 0:
             return True
         ended = False
         receiving_data = self.receiving_data[port]
@@ -141,7 +142,7 @@ class Switch(Device):
                 if pointer[2] > 0:
                     pointer[2] -= 1  # Comment if the the switch must not wait to resend data in case of collision
                 self.resend_attempts[port] += 1
-                if self.resend_attempts[port] == 60:
+                if self.resend_attempts[port] >= 50:
                     ended = self.reset(port, pointer)
                     break
         self.write("\n")

@@ -6,22 +6,22 @@ from switch import Host, Switch
 def master(signal_time: int, error_detection: str, instructions: list):
     i = 0
     time = 0
-    layer = Layer()
+    layer = Layer(signal_time, error_detection)
     sent = False
     while i < len(instructions) or sent:
         sent = False
         for device in layer.devices:
-            if type(device) == Host and device.send(signal_time, time) != Data.NULL or \
-                    type(device) == Switch and device.send(signal_time, time):
+            if type(device) == Host and device.send(time) != Data.NULL or type(device) == Switch and device.send(time):
                 sent = True
         if i < len(instructions):
             if time > instructions[i].time:
+                print("WRONG INSTRUCTION TIME.")
                 raise Exception
             if not sent and time < instructions[i].time:
                 time = instructions[i].time
             j = i
             while j < len(instructions) and instructions[j].time == time:
-                if controller(signal_time, error_detection, layer, instructions[j]):
+                if controller(layer, instructions[j]):
                     sent = True
                 j += 1
             i = j
@@ -29,23 +29,23 @@ def master(signal_time: int, error_detection: str, instructions: list):
     return time
 
 
-def controller(signal_time: int, error_detection: str, layer: Layer, instruction: Instruction):
+def controller(layer: Layer, instruction: Instruction):
     if len(instruction.details) > 3:
         print("\nWRONG INSTRUCTION FORMAT.")
         raise Exception
     if instruction.command == "create":
-        create(error_detection, layer, instruction)
+        create(layer, instruction)
     elif instruction.command == "connect":
         connect(layer, instruction)
     elif instruction.command == "send":
-        send(signal_time, layer, instruction)
+        send(layer, instruction)
         return True
     elif instruction.command == "disconnect":
         disconnect(layer, instruction)
     elif instruction.command == "mac":
         mac(layer, instruction)
     elif instruction.command == "send_frame":
-        send_frame(signal_time, layer, instruction)
+        send_frame(layer, instruction)
         return True
     else:
         print("\nUNRECOGNIZED INSTRUCTION.")

@@ -8,6 +8,7 @@ def define(error_detection: str):
         return Detection.HAMMING
     if error_detection == "CRC":
         return Detection.CRC
+    print("\nUNRECOGNIZED ALGORITHM.")
     raise Exception
 
 
@@ -16,7 +17,7 @@ def create(error_detection: Detection, data: list):
         return encode_h(data)
     elif error_detection == Detection.CRC:
         return encode_c(data)
-    raise Exception
+    return []
 
 
 def detect(error_detection: Detection, data: list, code: list):
@@ -26,4 +27,4 @@ def detect(error_detection: Detection, data: list, code: list):
         return decode_h(data, code)
     elif error_detection == Detection.CRC:
         return not decode_c(code).__contains__(1)
-    raise Exception
+    return []

@@ -1,9 +1,8 @@
 from layer import Layer
 from objects import Instruction
-from converter import hexadecimal_to_binary
 
 
-def create(error_detection: str, layer: Layer, instruction: Instruction):
+def create(layer: Layer, instruction: Instruction):
     device = instruction.details[0]
     name = instruction.details[1]
     if device == "hub" or device == "switch":
@@ -19,7 +18,7 @@ def create(error_detection: str, layer: Layer, instruction: Instruction):
     else:
         print("\nUNRECOGNIZED DEVICE TYPE.")
         raise Exception
-    layer.create(error_detection, device, name, ports_number)
+    layer.create(device, name, ports_number)
     write(instruction.time, "create, device={}, name={}{}\n".format(device, name, ", ports_number={}".
                                                                     format(ports_number)
                                                                     if device == ("hub" or "switch") else ""))
@@ -42,7 +41,7 @@ def connect(layer: Layer, instruction: Instruction):
                                                                                                 port2[0], port1[1]))
 
 
-def send(signal_time: int, layer: Layer, instruction: Instruction):
+def send(layer: Layer, instruction: Instruction):
     if len(instruction.details) > 2:
         print("\nWRONG SEND INSTRUCTION FORMAT.")
         raise Exception
@@ -53,7 +52,7 @@ def send(signal_time: int, layer: Layer, instruction: Instruction):
         if data[i] != 0 and data[i] != 1:
             print("\nUNRECOGNIZED DATA TYPE.")
             raise Exception
-    layer.send(signal_time, instruction.time, host, data)
+    layer.send(instruction.time, host, data)
     write(instruction.time, "send, host={}, data={}\n".format(host, details))
 
 
@@ -76,9 +75,9 @@ def mac(layer: Layer, instruction: Instruction):
     write(instruction.time, "mac, host={}, address={}\n".format(host, address))
 
 
-def send_frame(signal_time: int, layer: Layer, instruction: Instruction):
+def send_frame(layer: Layer, instruction: Instruction):
     host = instruction.details[0]
-    destiny_mac = instruction.details[1]
+    destination_mac = instruction.details[1]
     data = instruction.details[2]
-    layer.send_frame(signal_time, instruction.time, host, destiny_mac, hexadecimal_to_binary(data))
-    write(instruction.time, "send_frame, host={}, destiny_mac={}, data={}\n".format(host, destiny_mac, data))
+    layer.send_frame(instruction.time, host, destination_mac, data)
+    write(instruction.time, "send_frame, host={}, destination_mac={}, data={}\n".format(host, destination_mac, data))

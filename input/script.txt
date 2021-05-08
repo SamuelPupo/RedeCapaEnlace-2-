@@ -20,8 +20,8 @@
 5650 send_frame pp C5D6 A0
 6363 connect h_1 sw_4
 6364 connect h_2 pc_1
-6365 send_frame pc C5D6 B1
-6600 send_frame pp A4B5 C3
+6365 send_frame pp A4B5 C3
+6600 send_frame pc C5D6 B1
 8600 send_frame cp FFFF D4
 9610 disconnect sw_2
 9611 create switch ws 3

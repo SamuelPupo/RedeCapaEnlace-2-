@@ -5,16 +5,19 @@ from converter import hexadecimal_to_binary
 
 
 class Layer:
-    def __init__(self):
+    def __init__(self, signal_time: int, error_detection: str):
+        self.signal_time = signal_time
+        self.error_detection = error_detection
         self.devices = set()
+        self.macs = set()
 
-    def create(self, error_detection: str, device: str, name: str, ports_number: int = 1):
+    def create(self, device: str, name: str, ports_number: int = 1):
         if device == "hub":
             self.devices.add(Hub(name, ports_number))
         elif device == "host":
-            self.devices.add(Host(error_detection, name))
+            self.devices.add(Host(self.signal_time, self.error_detection, name))
         elif device == "switch":
-            self.devices.add(Switch(name, ports_number))
+            self.devices.add(Switch(self.signal_time, name, ports_number))
 
     def connect(self, time: int, device1: str, port1: int, device2: str, port2: int):
         if device1 == device2:
@@ -36,13 +39,16 @@ class Layer:
         d1.connect(time, port1, d2, port2)
         d2.connect(time, port2, d1, port1)
 
-    def send(self, signal_time: int, time: int, host: str, data: list):
+    def send(self, time: int, host: str, data: list):
         for d in self.devices:
             if d.name == host:
                 if type(d) != Host:
                     print("\nWRONG SEND INSTRUCTION DEVICE TYPE.")
                     raise Exception
-                d.start_send(signal_time, time, data)
+                if len(data) % 8 != 0:
+                    print("\nDATA ISN'T A MULTIPLE OF 8.")
+                    raise Exception
+                d.start_send(time, data)
                 return
         print("\nUNRECOGNIZED DEVICE.")
         raise Exception
@@ -69,23 +75,36 @@ class Layer:
                 except Exception:
                     print("\nMAC ISN'T HEXADECIMAL.")
                     raise Exception
-                d.rename(address)
+                count = len(self.macs)
+                self.macs.add(address)
+                if count == len(self.macs):
+                    print("\nMAC ALREADY USED.")
+                    raise Exception
+                d.set_mac(address)
                 return
         print("\nUNRECOGNIZED DEVICE.")
         raise Exception
 
-    def send_frame(self, signal_time: int, time: int, host: str, destiny_mac: str, data: list):
+    def send_frame(self, time: int, host: str, destination_mac: str, data: str):
         for d in self.devices:
             if d.name == host:
                 if type(d) != Host:
-                    print("\nWRONG SEND INSTRUCTION DEVICE TYPE.")
+                    print("\nWRONG SEND FRAME INSTRUCTION DEVICE TYPE.")
                     raise Exception
                 try:
-                    destiny_mac = hexadecimal_to_binary(destiny_mac)
+                    destination_mac = hexadecimal_to_binary(destination_mac)
                 except Exception:
                     print("\nMAC ISN'T HEXADECIMAL.")
                     raise Exception
-                d.start_send(signal_time, time, data, destiny_mac)
+                try:
+                    data = hexadecimal_to_binary(data)
+                except Exception:
+                    print("\nDATA ISN'T HEXADECIMAL.")
+                    raise Exception
+                if len(data) % 8 != 0:
+                    print("\nDATA ISN'T A MULTIPLE OF 8.")
+                    raise Exception
+                d.start_send(time, data, destination_mac)
                 return
         print("\nUNRECOGNIZED DEVICE.")
         raise Exception
