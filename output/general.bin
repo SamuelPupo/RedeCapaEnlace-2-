@@ -1,33 +1,40 @@
-time=0, instruction=create, device=hub, name=h, ports_number=4
 time=0, instruction=create, device=host, name=pc
-time=10, instruction=create, device=host, name=cp
-time=800, instruction=mac, host=pc, address=A4B5
-time=980, instruction=connect, device_x=pc, port_x=1, device_y=cp, port_y=1
-time=990, instruction=send_frame, host=pc, destination_mac=FFFF, data=A6F43400FFB34E
-time=1000, instruction=send_frame, host=cp, destination_mac=A4B5, data=A6F43400FFB34E
-time=1010, instruction=send_frame, host=pc, destination_mac=A4B5, data=B5
-time=3050, instruction=create, device=switch, name=sw
-time=3602, instruction=connect, device_x=pc, port_x=1, device_y=sw, port_y=1
-time=3610, instruction=connect, device_x=sw, port_x=2, device_y=cp, port_y=2
-time=3620, instruction=mac, host=cp, address=F2D2
-time=3625, instruction=create, device=host, name=pp
-time=3626, instruction=connect, device_x=pp, port_x=1, device_y=sw, port_y=1
-time=3630, instruction=send_frame, host=pc, destination_mac=F2D2, data=C4
-time=3700, instruction=send_frame, host=cp, destination_mac=A4B5, data=D3
-time=4400, instruction=send_frame, host=pc, destination_mac=F2D2, data=E2
-time=4415, instruction=mac, host=pp, address=C5D6
-time=4800, instruction=send_frame, host=pp, destination_mac=F2D2, data=F1
-time=5650, instruction=send_frame, host=pp, destination_mac=C5D6, data=A0
-time=6363, instruction=connect, device_x=h, port_x=1, device_y=sw, port_y=1
-time=6364, instruction=connect, device_x=h, port_x=2, device_y=pc, port_y=2
-time=6365, instruction=send_frame, host=pp, destination_mac=A4B5, data=C3
-time=6600, instruction=send_frame, host=pc, destination_mac=C5D6, data=B1
-time=8600, instruction=send_frame, host=cp, destination_mac=FFFF, data=D4
-time=9610, instruction=disconnect, device=sw, port=2
-time=9611, instruction=create, device=switch, name=ws
-time=9612, instruction=connect, device_x=ws, port_x=1, device_y=cp, port_y=1
-time=9619, instruction=connect, device_x=ws, port_x=2, device_y=sw, port_y=2
-time=9620, instruction=send_frame, host=pc, destination_mac=FFFF, data=A0
-time=9900, instruction=disconnect, device=cp, port=1
-time=10000, instruction=connect, device_x=cp, port_x=1, device_y=ws, port_y=1
-time=10100, instruction=disconnect, device=pc, port=1
+time=0, instruction=create, device=host, name=cp
+time=3, instruction=connect, device_x=pc, port_x=1, device_y=cp, port_y=1
+time=5, instruction=mac, host=cp, address=F2D2
+time=5, instruction=send_frame, host=pc, destination_mac=FFFF, data=0000
+time=6, instruction=mac, host=pc, address=A4B5
+time=7, instruction=send_frame, host=cp, destination_mac=A4B5, data=11112222
+time=11, instruction=send_frame, host=pc, destination_mac=F2D2, data=3333
+time=1690, instruction=create, device=hub, name=i, ports_number=3
+time=1695, instruction=create, device=hub, name=h, ports_number=4
+time=1700, instruction=connect, device_x=pc, port_x=1, device_y=h, port_y=4
+time=1701, instruction=connect, device_x=h, port_x=1, device_y=i, port_y=1
+time=1703, instruction=connect, device_x=cp, port_x=1, device_y=i, port_y=3
+time=1704, instruction=mac, host=pc, address=A1B1
+time=1704, instruction=send, host=pc, data=00001111
+time=1715, instruction=send_frame, host=cp, destination_mac=A1B1, data=4444
+time=1800, instruction=create, device=host, name=pp
+time=1900, instruction=mac, host=pp, address=C5D6
+time=2000, instruction=connect, device_x=pp, port_x=1, device_y=h, port_y=2
+time=2170, instruction=send_frame, host=cp, destination_mac=C5D6, data=5555
+time=2800, instruction=create, device=switch, name=sw
+time=3320, instruction=connect, device_x=sw, port_x=1, device_y=h, port_y=1
+time=3321, instruction=connect, device_x=sw, port_x=2, device_y=i, port_y=1
+time=3322, instruction=send_frame, host=cp, destination_mac=C5D6, data=66667777
+time=4000, instruction=send_frame, host=pp, destination_mac=F2D2, data=8888
+time=5500, instruction=send_frame, host=pc, destination_mac=C5D6, data=99990000
+time=6700, instruction=send_frame, host=cp, destination_mac=A1B1, data=01234567
+time=7870, instruction=send_frame, host=cp, destination_mac=C5D6, data=AAAA
+time=8900, instruction=connect, device_x=pp, port_x=1, device_y=sw, port_y=3
+time=8902, instruction=send_frame, host=cp, destination_mac=C5D6, data=BBBBCCCC
+time=9600, instruction=send_frame, host=pp, destination_mac=F2D2, data=DDDD
+time=10200, instruction=send_frame, host=pc, destination_mac=C5D6, data=EEEEFFFF
+time=10600, instruction=send_frame, host=pp, destination_mac=FFFF, data=89ABCDEF
+time=11100, instruction=disconnect, device=pp, port=1
+time=11300, instruction=disconnect, device=sw, port=2
+time=11500, instruction=connect, device_x=pp, port_x=1, device_y=sw, port_y=1
+time=11700, instruction=send_frame, host=pp, destination_mac=C5D6, data=01A2B3C4
+time=11900, instruction=disconnect, device=sw, port=1
+time=12000, instruction=connect, device_x=sw, port_x=1, device_y=pp, port_y=1
+time=12100, instruction=send_frame, host=pp, destination_mac=C5D6, data=5D6E7F89

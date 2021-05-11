@@ -11,7 +11,7 @@ class Host(Device):
         self.mac = mac
         self.transmitting_started = -1
         self.data = []
-        self.data_pointer = [0, 0]
+        self.data_pointer = 0
         self.resend_attempts = 0
         self.receiving_data = [[] for _ in range(6)]
         self.receiving_data_pointer = [0, 0]
@@ -21,7 +21,7 @@ class Host(Device):
     def connect(self, time: int, port: int, other_device, other_port: int):
         super().connect(time, port, other_device, other_port)
         if self.ports[0].data != Data.NULL:
-            self.data_pointer[1] += 1
+            self.data_pointer += 1
 
     def disconnect(self, time: int, port: int):
         cable = self.ports[port]
@@ -33,15 +33,24 @@ class Host(Device):
         if type(device) != Host and len(self.receiving_data[0]) > 0:
             self.receive_bit(time, cable.port, Data.NULL, True)
         super().disconnect(time, port)
-        self.data_pointer[1] = 0  # Comment if the the host must not restart sending data in case of disconnection
+        self.data_pointer = 0  # Comment if the the host must not restart sending data in case of disconnection
 
     def collision(self, string: str):
         super().collision(string)
-        if self.data_pointer[1] > 0:
-            self.data_pointer[1] -= 1  # Comment if the the host must not wait to resend data in case of collision
+        if self.data_pointer > 0:
+            self.data_pointer -= 1  # Comment if the the host must not wait to resend data in case of collision
         self.resend_attempts += 1
         if self.resend_attempts == 50:
             self.reset()
+        self.ports[0].data = Data.NULL
+
+    def reset(self):
+        self.data.pop(0)
+        if len(self.data) < 1:
+            self.transmitting_started = -1
+        self.data_pointer = 0
+        self.resend_attempts = 0
+        self.ports[0].data = Data.NULL
 
     def receive_bit(self, time: int, port: int, data: Data, disconnected: bool = False):
         super().receive_bit(time, port, data, disconnected)
@@ -79,14 +88,15 @@ class Host(Device):
         if destination == self.mac or destination == "FFFF":
             file = open("output/{}_data.txt".format(self.name), 'a')
             sender = self.receiving_data[1]
-            data = binary_to_hexadecimal(self.receiving_data[4])
-            file.write("time={}, host_mac={}, data={}".format(time, sender if len(sender) > 0 else "FFFF",
-                                                              data if len(data) > 0 else "NULL"))
-            file.write(", state={}\n".format("ERROR" if self.receiving_data[2] != len(self.receiving_data[4]) or
-                                             self.receiving_data[3] != len(self.receiving_data[5]) or
-                                             not detect(self.error_detection, self.receiving_data[4],
-                                                        self.receiving_data[5]) else "OK"))
-            file.close()
+            if len(sender) == 4:
+                data = binary_to_hexadecimal(self.receiving_data[4])
+                file.write("time={}, host_mac={}, data={}".format(time, sender if len(sender) > 0 else "FFFF",
+                                                                  data if len(data) > 0 else "NULL"))
+                file.write(", state={}\n".format("ERROR" if self.receiving_data[2] != len(self.receiving_data[4]) or
+                                                 self.receiving_data[3] != len(self.receiving_data[5]) or
+                                                 not detect(self.error_detection, self.receiving_data[4],
+                                                            self.receiving_data[5]) else "OK"))
+                file.close()
         self.receiving_data = [[] for _ in range(6)]
         self.receiving_data_pointer = [0, 0]
 
@@ -110,33 +120,29 @@ class Host(Device):
         if disconnected:
             data = Data.NULL
         else:
-            frame = self.data_pointer[0]
-            pointer = self.data_pointer[1]
-            if pointer < len(self.data[frame]):
-                data = Data.ONE if self.data[frame][pointer] == 1 else Data.ZERO
-                self.data_pointer[1] += 1
+            pointer = self.data_pointer
+            if len(self.data) > 0 and pointer < len(self.data[0]):
+                data = Data.ONE if self.data[0][pointer] == 1 else Data.ZERO
+                self.data_pointer += 1
             else:
                 data = Data.NULL
-                self.data_pointer[0] += 1
-                self.data_pointer[1] = 0
-                frame += 1
-                if frame >= len(self.data):
-                    self.reset()
+                self.data.pop(0)
+                self.data_pointer = 0
+                if len(self.data) < 1:
+                    self.transmitting_started = -1
+                    self.data = []
+                    self.data_pointer = 0
+                    self.resend_attempts = 0
+                    self.ports[0].data = Data.NULL
         self.send_bit(time, data, disconnected)
         if self.ports[0].device is None:
-            self.data_pointer[1] -= 1  # Comment if the the host must not wait to resend data in case of disconnection
+            self.data_pointer -= 1  # Comment if the the host must not wait to resend data in case of disconnection
             self.resend_attempts += 1
             if self.resend_attempts == 25:
                 self.reset()
-        elif self.data_pointer[1] > 0:
+        elif self.data_pointer > 0:
             self.resend_attempts = 0
         return data if not disconnected and len(self.data) < 1 else data.ZERO
-
-    def reset(self):
-        self.transmitting_started = -1
-        self.data = []
-        self.data_pointer = [0, 0]
-        self.ports[0].data = Data.NULL
 
     def set_mac(self, mac: str):
         if mac == "FFFF":
