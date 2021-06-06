@@ -4,7 +4,8 @@ input: directorio que almacena los datos de entrada del programa
 
 
 output: directorio que almacena los datos de salida generados por el programa
-	general.bin: instrucciones ejecutadas
+	devices.bin: lista de dispositivos que componen la red
+	general.bin: lista de instrucciones ejecutadas
 	{device}.txt: bits enviados y recibidos por el dispositivo, momento en que sucedio y estado de la accion
 	{host}_data.txt: datos hexadecimales recibidos por la computadora, momento en que sucedio, computadora que lo envio y correctitud de la informacion
 
@@ -12,16 +13,19 @@ output: directorio que almacena los datos de salida generados por el programa
 main.py:
 	main: metodo principal que ejecuta todo el programa
 	directory: metodo que reinicia el directorio "output"
-	translator: metodo que genera las instrucciones a partir del texto de "input/script.txt"
+	lines: metodo que lee todas las lineas del texto de "input/script.txt"
+	translator: metodo que genera las instrucciones a partir de las lineas leidas
 
 master.py:
 	master: metodo que ejecuta las instrucciones
 	controller: metodo que identifica la instruccion a ejecutar
+	write: metodo que escribe la lista de dispositivos de la red en "output/devices.bin"
 
 instructions.py:
 	create: metodo que genera los datos para crear un nuevo dispositivo
 	write: metodo que escribe la instruccion a ejecutar en "output/general.bin"
 	connect: metodo que genera los datos para interconectar dos puertos de dos dispositivos
+	reverse: metodo que permite separar el nombre del dispositivo de su puerto señalado
 	send: metodo que genera los datos para que una computadora los envie
 	disconnect: metodo que genera los datos para desconectar un puerto de un dispositivo
 	mac: metodo que genera la direccion "mac" de una computadora
@@ -51,8 +55,8 @@ device.py:
 		collision: metodo que se ejecuta cuando ocurre una colision
 		write: metodo que actualiza el "output/{device}.txt" del dispositivo
 		receive_bit: metodo que se ejecuta cuando se recibe un bit desde otro dispositivo
-		send_bit: metodo que envia un bit a otro dispositivo		
-		transmission: metodo que devuelve si el envio de un bit fue exitoso o no		
+		send_bit: metodo que envia un bit a otro dispositivo
+		transmission: metodo que devuelve si el envio de un bit fue exitoso o no
 
 hub.py:
 	Hub (hereda de Device): clase que abarca a las concentradores
@@ -71,8 +75,7 @@ host.py:
 
 switch.py:
 	Switch (hereda de Device): clase que abarca a los conmutadores
-		mac_map: metodo que actualiza la tabla de direcciones "mac" del conmutador
-		destination: metodo que actualiza el enlace entre dos puertos del conmutador para reenviar por uno la informacion que se recibe por otro
+		map: metodo que actualiza la tabla de direcciones "mac" del conmutador y enlaza dos puertos del conmutador para reenviar la informacion que se recibe por uno hacia el otro
 		end_frame: metodo que se ejecuta cuando se termina de recibir un bloque completo de informacion
 		send: metodo que permite enviar informacion desde los puertos del conmutador hacia otros dispositivos
 		send_port: metodo que envia informacion desde un puerto del conmutador hacia otros dispositivos

@@ -1,6 +1,5 @@
 from hub import Hub
-from host import Host
-from switch import Switch
+from switch import Host, Switch
 from converter import hexadecimal_to_binary
 
 
@@ -8,16 +7,22 @@ class Layer:
     def __init__(self, signal_time: int, error_detection: str):
         self.signal_time = signal_time
         self.error_detection = error_detection
-        self.devices = set()
+        self.devices = list()
+        self.names = set()
         self.macs = set()
 
     def create(self, device: str, name: str, ports_number: int = 1):
+        count = len(self.names)
+        self.names.add(name)
+        if count == len(self.names):
+            print("\nNAME ALREADY USED.")
+            raise Exception
         if device == "hub":
-            self.devices.add(Hub(name, ports_number))
+            self.devices.append(Hub(name, ports_number))
         elif device == "host":
-            self.devices.add(Host(self.signal_time, self.error_detection, name))
+            self.devices.append(Host(self.signal_time, self.error_detection, name))
         elif device == "switch":
-            self.devices.add(Switch(self.signal_time, name, ports_number))
+            self.devices.append(Switch(self.signal_time, name, ports_number))
 
     def connect(self, time: int, device1: str, port1: int, device2: str, port2: int):
         if device1 == device2:

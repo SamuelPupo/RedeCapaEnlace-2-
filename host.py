@@ -1,5 +1,5 @@
 from hub import Device, Data
-from algorithms import define, create, detect
+from algorithms import define, detect, create
 from converter import binary_to_hexadecimal, binary_to_decimal, hexadecimal_to_binary, decimal_to_binary
 
 
@@ -17,8 +17,8 @@ class Host(Device):
         self.receiving_data_pointer = [0, 0]
         file = open("output/{}_data.txt".format(name), 'w')
         file.close()
-        
-    def connect(self, time: int, port: int, other_device, other_port: int):
+
+    def connect(self, time: int, port: int, other_device: Device, other_port: int):
         super().connect(time, port, other_device, other_port)
         if self.ports[0].data != Data.NULL:
             self.data_pointer += 1
@@ -83,20 +83,19 @@ class Host(Device):
                     self.receiving_data[section] = binary_to_decimal(self.receiving_data[section]) * 8
             self.reset_receiving(time)
 
-    def reset_receiving(self, time):
-        destination = self.receiving_data[0]
+    def reset_receiving(self, time: int):
+        receiving_data = self.receiving_data
+        destination = receiving_data[0]
         if destination == self.mac or destination == "FFFF":
+            sender = receiving_data[1]
+            data = binary_to_hexadecimal(receiving_data[4])
+            state = "ERROR" if receiving_data[2] != len(receiving_data[4]) or \
+                    receiving_data[3] != len(receiving_data[5]) or \
+                    not detect(self.error_detection, receiving_data[4], receiving_data[5]) else "OK"
             file = open("output/{}_data.txt".format(self.name), 'a')
-            sender = self.receiving_data[1]
-            if len(sender) == 4:
-                data = binary_to_hexadecimal(self.receiving_data[4])
-                file.write("time={}, host_mac={}, data={}".format(time, sender if len(sender) > 0 else "FFFF",
-                                                                  data if len(data) > 0 else "NULL"))
-                file.write(", state={}\n".format("ERROR" if self.receiving_data[2] != len(self.receiving_data[4]) or
-                                                 self.receiving_data[3] != len(self.receiving_data[5]) or
-                                                 not detect(self.error_detection, self.receiving_data[4],
-                                                            self.receiving_data[5]) else "OK"))
-                file.close()
+            file.write("time={}, host_mac={}, data={}, state={}\n".format(time, sender if len(sender) > 0 else "FFFF",
+                                                                          data if len(data) > 0 else "NULL", state))
+            file.close()
         self.receiving_data = [[] for _ in range(6)]
         self.receiving_data_pointer = [0, 0]
 
@@ -146,6 +145,6 @@ class Host(Device):
 
     def set_mac(self, mac: str):
         if mac == "FFFF":
-            print("WRONG MAC ADDRESS.")
+            print("\nWRONG MAC ADDRESS.")
             raise Exception
         self.mac = mac

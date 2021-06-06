@@ -248,37 +248,39 @@ time=3215, port=1, receive=0
 
 time=3225, port=1, receive=null, cause=data_ended
 
+time=3472, port=1, receive=1
+
 time=3482, port=1, receive=1
 
-time=3492, port=1, receive=1
+time=3492, port=1, receive=0
 
 time=3502, port=1, receive=0
 
 time=3512, port=1, receive=0
 
-time=3522, port=1, receive=0
+time=3522, port=1, receive=1
 
-time=3532, port=1, receive=1
+time=3532, port=1, receive=0
 
-time=3542, port=1, receive=0
+time=3542, port=1, receive=1
 
 time=3552, port=1, receive=1
 
 time=3562, port=1, receive=1
 
-time=3572, port=1, receive=1
+time=3572, port=1, receive=0
 
-time=3582, port=1, receive=0
+time=3582, port=1, receive=1
 
-time=3592, port=1, receive=1
+time=3592, port=1, receive=0
 
-time=3602, port=1, receive=0
+time=3602, port=1, receive=1
 
 time=3612, port=1, receive=1
 
-time=3622, port=1, receive=1
+time=3622, port=1, receive=0
 
-time=3632, port=1, receive=0
+time=3632, port=1, receive=1
 
 time=3642, port=1, receive=1
 
@@ -286,29 +288,29 @@ time=3652, port=1, receive=1
 
 time=3662, port=1, receive=1
 
-time=3672, port=1, receive=1
+time=3672, port=1, receive=0
 
 time=3682, port=1, receive=0
 
-time=3692, port=1, receive=0
+time=3692, port=1, receive=1
 
-time=3702, port=1, receive=1
+time=3702, port=1, receive=0
 
-time=3712, port=1, receive=0
+time=3712, port=1, receive=1
 
 time=3722, port=1, receive=1
 
-time=3732, port=1, receive=1
+time=3732, port=1, receive=0
 
-time=3742, port=1, receive=0
+time=3742, port=1, receive=1
 
-time=3752, port=1, receive=1
+time=3752, port=1, receive=0
 
 time=3762, port=1, receive=0
 
-time=3772, port=1, receive=0
+time=3772, port=1, receive=1
 
-time=3782, port=1, receive=1
+time=3782, port=1, receive=0
 
 time=3792, port=1, receive=0
 
@@ -320,9 +322,9 @@ time=3822, port=1, receive=0
 
 time=3832, port=1, receive=0
 
-time=3842, port=1, receive=0
+time=3842, port=1, receive=1
 
-time=3852, port=1, receive=1
+time=3852, port=1, receive=0
 
 time=3862, port=1, receive=0
 
@@ -338,23 +340,23 @@ time=3912, port=1, receive=0
 
 time=3922, port=1, receive=0
 
-time=3932, port=1, receive=0
+time=3932, port=1, receive=1
 
-time=3942, port=1, receive=1
+time=3942, port=1, receive=0
 
 time=3952, port=1, receive=0
 
-time=3962, port=1, receive=0
+time=3962, port=1, receive=1
 
 time=3972, port=1, receive=1
 
-time=3982, port=1, receive=1
+time=3982, port=1, receive=0
 
 time=3992, port=1, receive=0
 
 time=4000, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4002, port=1, receive=0
+time=4002, port=1, receive=1
 
 time=4010, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -362,7 +364,7 @@ time=4012, port=1, receive=1
 
 time=4020, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4022, port=1, receive=1
+time=4022, port=1, receive=0
 
 time=4030, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -370,7 +372,7 @@ time=4032, port=1, receive=0
 
 time=4040, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4042, port=1, receive=0
+time=4042, port=1, receive=1
 
 time=4050, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -378,7 +380,7 @@ time=4052, port=1, receive=1
 
 time=4060, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4062, port=1, receive=1
+time=4062, port=1, receive=0
 
 time=4070, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -386,7 +388,7 @@ time=4072, port=1, receive=0
 
 time=4080, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4082, port=1, receive=0
+time=4082, port=1, receive=1
 
 time=4090, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -394,7 +396,7 @@ time=4092, port=1, receive=1
 
 time=4100, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4102, port=1, receive=1
+time=4102, port=1, receive=0
 
 time=4110, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -402,7 +404,7 @@ time=4112, port=1, receive=0
 
 time=4120, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4122, port=1, receive=0
+time=4122, port=1, receive=1
 
 time=4130, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -414,11 +416,11 @@ time=4142, port=1, receive=1
 
 time=4150, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4152, port=1, receive=1
+time=4152, port=1, receive=0
 
 time=4160, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4162, port=1, receive=0
+time=4162, port=1, receive=1
 
 time=4170, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -430,11 +432,11 @@ time=4182, port=1, receive=1
 
 time=4190, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4192, port=1, receive=1
+time=4192, port=1, receive=0
 
 time=4200, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4202, port=1, receive=0
+time=4202, port=1, receive=1
 
 time=4210, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -446,11 +448,11 @@ time=4222, port=1, receive=1
 
 time=4230, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4232, port=1, receive=1
+time=4232, port=1, receive=0
 
 time=4240, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4242, port=1, receive=0
+time=4242, port=1, receive=1
 
 time=4250, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -470,7 +472,7 @@ time=4282, port=1, receive=1
 
 time=4290, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4292, port=1, receive=1
+time=4292, port=1, receive=0
 
 time=4300, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -478,11 +480,11 @@ time=4302, port=1, receive=0
 
 time=4310, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4312, port=1, receive=0
+time=4312, port=1, receive=1
 
 time=4320, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4322, port=1, receive=1
+time=4322, port=1, receive=0
 
 time=4330, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -502,7 +504,7 @@ time=4362, port=1, receive=0
 
 time=4370, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4372, port=1, receive=0
+time=4372, port=1, receive=1
 
 time=4380, port=1, send=1, transmission==incomplete, cause=collision
 
@@ -522,15 +524,13 @@ time=4412, port=1, receive=1
 
 time=4420, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4422, port=1, receive=1
+time=4422, port=1, receive=0
 
 time=4430, port=1, send=1, transmission==incomplete, cause=collision
 
-time=4432, port=1, receive=0
+time=4432, port=1, receive=null, cause=data_ended
 
-time=4440, port=1, send=1, transmission==incomplete, cause=collision
-
-time=4442, port=1, receive=null, cause=data_ended
+time=4440, port=1, send=1, transmission=successfully
 
 time=4450, port=1, send=1, transmission=successfully
 
@@ -538,61 +538,61 @@ time=4460, port=1, send=1, transmission=successfully
 
 time=4470, port=1, send=1, transmission=successfully
 
-time=4480, port=1, send=1, transmission=successfully
+time=4480, port=1, send=0, transmission=successfully
 
 time=4490, port=1, send=0, transmission=successfully
 
-time=4500, port=1, send=0, transmission=successfully
+time=4500, port=1, send=1, transmission=successfully
 
-time=4510, port=1, send=1, transmission=successfully
+time=4510, port=1, send=0, transmission=successfully
 
-time=4520, port=1, send=0, transmission=successfully
+time=4520, port=1, send=1, transmission=successfully
 
 time=4530, port=1, send=1, transmission=successfully
 
-time=4540, port=1, send=1, transmission=successfully
+time=4540, port=1, send=0, transmission=successfully
 
-time=4550, port=1, send=0, transmission=successfully
+time=4550, port=1, send=1, transmission=successfully
 
-time=4560, port=1, send=1, transmission=successfully
+time=4560, port=1, send=0, transmission=successfully
 
 time=4570, port=1, send=0, transmission=successfully
 
-time=4580, port=1, send=0, transmission=successfully
+time=4580, port=1, send=1, transmission=successfully
 
-time=4590, port=1, send=1, transmission=successfully
+time=4590, port=1, send=0, transmission=successfully
 
-time=4600, port=1, send=0, transmission=successfully
+time=4600, port=1, send=1, transmission=successfully
 
 time=4610, port=1, send=1, transmission=successfully
 
-time=4620, port=1, send=1, transmission=successfully
+time=4620, port=1, send=0, transmission=successfully
 
 time=4630, port=1, send=0, transmission=successfully
 
 time=4640, port=1, send=0, transmission=successfully
 
-time=4650, port=1, send=0, transmission=successfully
+time=4650, port=1, send=1, transmission=successfully
 
-time=4660, port=1, send=1, transmission=successfully
+time=4660, port=1, send=0, transmission=successfully
 
-time=4670, port=1, send=0, transmission=successfully
+time=4670, port=1, send=1, transmission=successfully
 
 time=4680, port=1, send=1, transmission=successfully
 
 time=4690, port=1, send=1, transmission=successfully
 
-time=4700, port=1, send=1, transmission=successfully
+time=4700, port=1, send=0, transmission=successfully
 
-time=4710, port=1, send=0, transmission=successfully
+time=4710, port=1, send=1, transmission=successfully
 
-time=4720, port=1, send=1, transmission=successfully
+time=4720, port=1, send=0, transmission=successfully
 
-time=4730, port=1, send=0, transmission=successfully
+time=4730, port=1, send=1, transmission=successfully
 
 time=4740, port=1, send=1, transmission=successfully
 
-time=4750, port=1, send=1, transmission=successfully
+time=4750, port=1, send=0, transmission=successfully
 
 time=4760, port=1, send=0, transmission=successfully
 
@@ -606,9 +606,9 @@ time=4800, port=1, send=0, transmission=successfully
 
 time=4810, port=1, send=0, transmission=successfully
 
-time=4820, port=1, send=0, transmission=successfully
+time=4820, port=1, send=1, transmission=successfully
 
-time=4830, port=1, send=1, transmission=successfully
+time=4830, port=1, send=0, transmission=successfully
 
 time=4840, port=1, send=0, transmission=successfully
 
@@ -622,45 +622,45 @@ time=4880, port=1, send=0, transmission=successfully
 
 time=4890, port=1, send=0, transmission=successfully
 
-time=4900, port=1, send=0, transmission=successfully
+time=4900, port=1, send=1, transmission=successfully
 
-time=4910, port=1, send=1, transmission=successfully
+time=4910, port=1, send=0, transmission=successfully
 
-time=4920, port=1, send=0, transmission=successfully
+time=4920, port=1, send=1, transmission=successfully
 
-time=4930, port=1, send=1, transmission=successfully
+time=4930, port=1, send=0, transmission=successfully
 
 time=4940, port=1, send=0, transmission=successfully
 
 time=4950, port=1, send=0, transmission=successfully
 
-time=4960, port=1, send=0, transmission=successfully
+time=4960, port=1, send=1, transmission=successfully
 
-time=4970, port=1, send=1, transmission=successfully
+time=4970, port=1, send=0, transmission=successfully
 
 time=4980, port=1, send=0, transmission=successfully
 
 time=4990, port=1, send=0, transmission=successfully
 
-time=5000, port=1, send=0, transmission=successfully
+time=5000, port=1, send=1, transmission=successfully
 
-time=5010, port=1, send=1, transmission=successfully
+time=5010, port=1, send=0, transmission=successfully
 
 time=5020, port=1, send=0, transmission=successfully
 
 time=5030, port=1, send=0, transmission=successfully
 
-time=5040, port=1, send=0, transmission=successfully
+time=5040, port=1, send=1, transmission=successfully
 
-time=5050, port=1, send=1, transmission=successfully
+time=5050, port=1, send=0, transmission=successfully
 
 time=5060, port=1, send=0, transmission=successfully
 
 time=5070, port=1, send=0, transmission=successfully
 
-time=5080, port=1, send=0, transmission=successfully
+time=5080, port=1, send=1, transmission=successfully
 
-time=5090, port=1, send=1, transmission=successfully
+time=5090, port=1, send=0, transmission=successfully
 
 time=5100, port=1, send=0, transmission=successfully
 
@@ -670,29 +670,27 @@ time=5120, port=1, send=0, transmission=successfully
 
 time=5130, port=1, send=0, transmission=successfully
 
-time=5140, port=1, send=0, transmission=successfully
+time=5140, port=1, send=1, transmission=successfully
 
-time=5150, port=1, send=1, transmission=successfully
+time=5150, port=1, send=0, transmission=successfully
 
-time=5160, port=1, send=0, transmission=successfully
+time=5160, port=1, send=1, transmission=successfully
 
-time=5170, port=1, send=1, transmission=successfully
+time=5170, port=1, send=0, transmission=successfully
 
-time=5180, port=1, send=0, transmission=successfully
+time=5180, port=1, send=1, transmission=successfully
 
 time=5190, port=1, send=1, transmission=successfully
 
-time=5200, port=1, send=1, transmission=successfully
+time=5200, port=1, send=0, transmission=successfully
 
 time=5210, port=1, send=0, transmission=successfully
 
 time=5220, port=1, send=0, transmission=successfully
 
-time=5230, port=1, send=0, transmission=successfully
+time=5230, port=1, send=1, transmission=successfully
 
-time=5240, port=1, send=1, transmission=successfully
-
-time=5250, port=1, send=null, cause=data_ended, transmission=successfully
+time=5240, port=1, send=null, cause=data_ended, transmission=successfully
 
 time=5500, port=1, receive=1
 
@@ -888,11 +886,13 @@ time=6450, port=1, receive=0
 
 time=6460, port=1, receive=null, cause=data_ended
 
-time=6860, port=1, receive=1
+time=6850, port=1, receive=1
 
-time=6870, port=1, receive=0
+time=6860, port=1, receive=0
 
-time=6880, port=1, receive=1
+time=6870, port=1, receive=1
+
+time=6880, port=1, receive=0
 
 time=6890, port=1, receive=0
 
@@ -900,23 +900,23 @@ time=6900, port=1, receive=0
 
 time=6910, port=1, receive=0
 
-time=6920, port=1, receive=0
+time=6920, port=1, receive=1
 
 time=6930, port=1, receive=1
 
-time=6940, port=1, receive=1
+time=6940, port=1, receive=0
 
-time=6950, port=1, receive=0
+time=6950, port=1, receive=1
 
 time=6960, port=1, receive=1
 
-time=6970, port=1, receive=1
+time=6970, port=1, receive=0
 
 time=6980, port=1, receive=0
 
 time=6990, port=1, receive=0
 
-time=7000, port=1, receive=0
+time=7000, port=1, receive=1
 
 time=7010, port=1, receive=1
 
@@ -926,29 +926,29 @@ time=7030, port=1, receive=1
 
 time=7040, port=1, receive=1
 
-time=7050, port=1, receive=1
+time=7050, port=1, receive=0
 
 time=7060, port=1, receive=0
 
-time=7070, port=1, receive=0
+time=7070, port=1, receive=1
 
-time=7080, port=1, receive=1
+time=7080, port=1, receive=0
 
-time=7090, port=1, receive=0
+time=7090, port=1, receive=1
 
 time=7100, port=1, receive=1
 
-time=7110, port=1, receive=1
+time=7110, port=1, receive=0
 
-time=7120, port=1, receive=0
+time=7120, port=1, receive=1
 
-time=7130, port=1, receive=1
+time=7130, port=1, receive=0
 
 time=7140, port=1, receive=0
 
-time=7150, port=1, receive=0
+time=7150, port=1, receive=1
 
-time=7160, port=1, receive=1
+time=7160, port=1, receive=0
 
 time=7170, port=1, receive=0
 
@@ -960,9 +960,9 @@ time=7200, port=1, receive=0
 
 time=7210, port=1, receive=0
 
-time=7220, port=1, receive=0
+time=7220, port=1, receive=1
 
-time=7230, port=1, receive=1
+time=7230, port=1, receive=0
 
 time=7240, port=1, receive=0
 
@@ -978,9 +978,9 @@ time=7290, port=1, receive=0
 
 time=7300, port=1, receive=0
 
-time=7310, port=1, receive=0
+time=7310, port=1, receive=1
 
-time=7320, port=1, receive=1
+time=7320, port=1, receive=0
 
 time=7330, port=1, receive=0
 
@@ -996,123 +996,123 @@ time=7380, port=1, receive=0
 
 time=7390, port=1, receive=0
 
-time=7400, port=1, receive=0
+time=7400, port=1, receive=1
 
-time=7410, port=1, receive=1
+time=7410, port=1, receive=0
 
 time=7420, port=1, receive=0
 
-time=7430, port=1, receive=0
+time=7430, port=1, receive=1
 
-time=7440, port=1, receive=1
+time=7440, port=1, receive=0
 
 time=7450, port=1, receive=0
 
 time=7460, port=1, receive=0
 
-time=7470, port=1, receive=0
+time=7470, port=1, receive=1
 
 time=7480, port=1, receive=1
 
-time=7490, port=1, receive=1
+time=7490, port=1, receive=0
 
-time=7500, port=1, receive=0
+time=7500, port=1, receive=1
 
-time=7510, port=1, receive=1
+time=7510, port=1, receive=0
 
 time=7520, port=1, receive=0
 
 time=7530, port=1, receive=0
 
-time=7540, port=1, receive=0
+time=7540, port=1, receive=1
 
-time=7550, port=1, receive=1
+time=7550, port=1, receive=0
 
-time=7560, port=1, receive=0
+time=7560, port=1, receive=1
 
-time=7570, port=1, receive=1
+time=7570, port=1, receive=0
 
-time=7580, port=1, receive=0
+time=7580, port=1, receive=1
 
 time=7590, port=1, receive=1
 
-time=7600, port=1, receive=1
+time=7600, port=1, receive=0
 
 time=7610, port=1, receive=0
 
-time=7620, port=1, receive=0
+time=7620, port=1, receive=1
 
 time=7630, port=1, receive=1
 
 time=7640, port=1, receive=1
 
-time=7650, port=1, receive=1
+time=7650, port=1, receive=0
 
-time=7660, port=1, receive=0
+time=7660, port=1, receive=1
 
-time=7670, port=1, receive=1
+time=7670, port=1, receive=0
 
 time=7680, port=1, receive=0
 
 time=7690, port=1, receive=0
 
-time=7700, port=1, receive=0
+time=7700, port=1, receive=1
 
 time=7710, port=1, receive=1
 
 time=7720, port=1, receive=1
 
-time=7730, port=1, receive=1
+time=7730, port=1, receive=0
 
-time=7740, port=1, receive=0
+time=7740, port=1, receive=1
 
-time=7750, port=1, receive=1
+time=7750, port=1, receive=0
 
-time=7760, port=1, receive=0
+time=7760, port=1, receive=1
 
 time=7770, port=1, receive=1
 
-time=7780, port=1, receive=1
+time=7780, port=1, receive=0
 
-time=7790, port=1, receive=0
+time=7790, port=1, receive=1
 
-time=7800, port=1, receive=1
+time=7800, port=1, receive=0
 
-time=7810, port=1, receive=0
+time=7810, port=1, receive=null, cause=data_ended
 
-time=7820, port=1, receive=null, cause=data_ended
+time=8020, port=1, receive=1
 
 time=8030, port=1, receive=1
 
-time=8040, port=1, receive=1
+time=8040, port=1, receive=0
 
 time=8050, port=1, receive=0
 
 time=8060, port=1, receive=0
 
-time=8070, port=1, receive=0
+time=8070, port=1, receive=1
 
-time=8080, port=1, receive=1
+time=8080, port=1, receive=0
 
-time=8090, port=1, receive=0
+time=8090, port=1, receive=1
 
 time=8100, port=1, receive=1
 
 time=8110, port=1, receive=1
 
-time=8120, port=1, receive=1
+time=8120, port=1, receive=0
 
-time=8130, port=1, receive=0
+time=8130, port=1, receive=1
 
-time=8140, port=1, receive=1
+time=8140, port=1, receive=0
 
-time=8150, port=1, receive=0
+time=8150, port=1, receive=1
 
 time=8160, port=1, receive=1
 
-time=8170, port=1, receive=1
+time=8170, port=1, receive=0
 
-time=8180, port=1, receive=0
+time=8180, port=1, receive=1
 
 time=8190, port=1, receive=1
 
@@ -1120,29 +1120,29 @@ time=8200, port=1, receive=1
 
 time=8210, port=1, receive=1
 
-time=8220, port=1, receive=1
+time=8220, port=1, receive=0
 
 time=8230, port=1, receive=0
 
-time=8240, port=1, receive=0
+time=8240, port=1, receive=1
 
-time=8250, port=1, receive=1
+time=8250, port=1, receive=0
 
-time=8260, port=1, receive=0
+time=8260, port=1, receive=1
 
 time=8270, port=1, receive=1
 
-time=8280, port=1, receive=1
+time=8280, port=1, receive=0
 
-time=8290, port=1, receive=0
+time=8290, port=1, receive=1
 
-time=8300, port=1, receive=1
+time=8300, port=1, receive=0
 
 time=8310, port=1, receive=0
 
-time=8320, port=1, receive=0
+time=8320, port=1, receive=1
 
-time=8330, port=1, receive=1
+time=8330, port=1, receive=0
 
 time=8340, port=1, receive=0
 
@@ -1156,9 +1156,9 @@ time=8380, port=1, receive=0
 
 time=8390, port=1, receive=0
 
-time=8400, port=1, receive=0
+time=8400, port=1, receive=1
 
-time=8410, port=1, receive=1
+time=8410, port=1, receive=0
 
 time=8420, port=1, receive=0
 
@@ -1172,57 +1172,57 @@ time=8460, port=1, receive=0
 
 time=8470, port=1, receive=0
 
-time=8480, port=1, receive=0
+time=8480, port=1, receive=1
 
-time=8490, port=1, receive=1
+time=8490, port=1, receive=0
 
-time=8500, port=1, receive=0
+time=8500, port=1, receive=1
 
-time=8510, port=1, receive=1
+time=8510, port=1, receive=0
 
-time=8520, port=1, receive=0
+time=8520, port=1, receive=1
 
-time=8530, port=1, receive=1
+time=8530, port=1, receive=0
 
-time=8540, port=1, receive=0
+time=8540, port=1, receive=1
 
-time=8550, port=1, receive=1
+time=8550, port=1, receive=0
 
-time=8560, port=1, receive=0
+time=8560, port=1, receive=1
 
-time=8570, port=1, receive=1
+time=8570, port=1, receive=0
 
-time=8580, port=1, receive=0
+time=8580, port=1, receive=1
 
-time=8590, port=1, receive=1
+time=8590, port=1, receive=0
 
-time=8600, port=1, receive=0
+time=8600, port=1, receive=1
 
-time=8610, port=1, receive=1
+time=8610, port=1, receive=0
 
-time=8620, port=1, receive=0
+time=8620, port=1, receive=1
 
-time=8630, port=1, receive=1
+time=8630, port=1, receive=0
 
-time=8640, port=1, receive=0
+time=8640, port=1, receive=1
 
-time=8650, port=1, receive=1
+time=8650, port=1, receive=0
 
-time=8660, port=1, receive=0
+time=8660, port=1, receive=1
 
 time=8670, port=1, receive=1
 
 time=8680, port=1, receive=1
 
-time=8690, port=1, receive=1
+time=8690, port=1, receive=0
 
 time=8700, port=1, receive=0
 
-time=8710, port=1, receive=0
+time=8710, port=1, receive=1
 
 time=8720, port=1, receive=1
 
-time=8730, port=1, receive=1
+time=8730, port=1, receive=0
 
 time=8740, port=1, receive=0
 
@@ -1230,19 +1230,17 @@ time=8750, port=1, receive=0
 
 time=8760, port=1, receive=0
 
-time=8770, port=1, receive=0
+time=8770, port=1, receive=1
 
-time=8780, port=1, receive=1
+time=8780, port=1, receive=0
 
-time=8790, port=1, receive=0
+time=8790, port=1, receive=1
 
-time=8800, port=1, receive=1
+time=8800, port=1, receive=0
 
-time=8810, port=1, receive=0
+time=8810, port=1, receive=1
 
-time=8820, port=1, receive=1
-
-time=8830, port=1, receive=null, cause=data_ended
+time=8820, port=1, receive=null, cause=data_ended
 
 time=9600, port=1, send=1, transmission=successfully
 

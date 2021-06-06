@@ -1002,6 +1002,10 @@ time=4282, port=3, receive=null, cause=data_ended
 time=4282, port=1, resend=null, cause=data_ended, transmission=successfully
 time=4282, port=2, resend=null, cause=data_ended, transmission=incomplete, cause=not_connected
 
+time=4590, port=1, receive=1
+time=4590, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4590, port=3, resend=1, transmission=successfully
+
 time=4600, port=1, receive=1
 time=4600, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=4600, port=3, resend=1, transmission=successfully
@@ -1014,65 +1018,65 @@ time=4620, port=1, receive=1
 time=4620, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=4620, port=3, resend=1, transmission=successfully
 
-time=4630, port=1, receive=1
-time=4630, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4630, port=3, resend=1, transmission=successfully
+time=4630, port=1, receive=0
+time=4630, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4630, port=3, resend=0, transmission=successfully
 
 time=4640, port=1, receive=0
 time=4640, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=4640, port=3, resend=0, transmission=successfully
 
-time=4650, port=1, receive=0
-time=4650, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4650, port=3, resend=0, transmission=successfully
+time=4650, port=1, receive=1
+time=4650, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4650, port=3, resend=1, transmission=successfully
 
-time=4660, port=1, receive=1
-time=4660, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4660, port=3, resend=1, transmission=successfully
+time=4660, port=1, receive=0
+time=4660, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4660, port=3, resend=0, transmission=successfully
 
-time=4670, port=1, receive=0
-time=4670, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4670, port=3, resend=0, transmission=successfully
+time=4670, port=1, receive=1
+time=4670, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4670, port=3, resend=1, transmission=successfully
 
 time=4680, port=1, receive=1
 time=4680, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=4680, port=3, resend=1, transmission=successfully
 
-time=4690, port=1, receive=1
-time=4690, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4690, port=3, resend=1, transmission=successfully
+time=4690, port=1, receive=0
+time=4690, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4690, port=3, resend=0, transmission=successfully
 
-time=4700, port=1, receive=0
-time=4700, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4700, port=3, resend=0, transmission=successfully
+time=4700, port=1, receive=1
+time=4700, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4700, port=3, resend=1, transmission=successfully
 
-time=4710, port=1, receive=1
-time=4710, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4710, port=3, resend=1, transmission=successfully
+time=4710, port=1, receive=0
+time=4710, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4710, port=3, resend=0, transmission=successfully
 
 time=4720, port=1, receive=0
 time=4720, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=4720, port=3, resend=0, transmission=successfully
 
-time=4730, port=1, receive=0
-time=4730, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4730, port=3, resend=0, transmission=successfully
+time=4730, port=1, receive=1
+time=4730, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4730, port=3, resend=1, transmission=successfully
 
-time=4740, port=1, receive=1
-time=4740, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4740, port=3, resend=1, transmission=successfully
+time=4740, port=1, receive=0
+time=4740, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4740, port=3, resend=0, transmission=successfully
 
-time=4750, port=1, receive=0
-time=4750, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4750, port=3, resend=0, transmission=successfully
+time=4750, port=1, receive=1
+time=4750, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4750, port=3, resend=1, transmission=successfully
 
 time=4760, port=1, receive=1
 time=4760, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=4760, port=3, resend=1, transmission=successfully
 
-time=4770, port=1, receive=1
-time=4770, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4770, port=3, resend=1, transmission=successfully
+time=4770, port=1, receive=0
+time=4770, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4770, port=3, resend=0, transmission=successfully
 
 time=4780, port=1, receive=0
 time=4780, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1082,17 +1086,17 @@ time=4790, port=1, receive=0
 time=4790, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=4790, port=3, resend=0, transmission=successfully
 
-time=4800, port=1, receive=0
-time=4800, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4800, port=3, resend=0, transmission=successfully
+time=4800, port=1, receive=1
+time=4800, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4800, port=3, resend=1, transmission=successfully
 
-time=4810, port=1, receive=1
-time=4810, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4810, port=3, resend=1, transmission=successfully
+time=4810, port=1, receive=0
+time=4810, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4810, port=3, resend=0, transmission=successfully
 
-time=4820, port=1, receive=0
-time=4820, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4820, port=3, resend=0, transmission=successfully
+time=4820, port=1, receive=1
+time=4820, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4820, port=3, resend=1, transmission=successfully
 
 time=4830, port=1, receive=1
 time=4830, port=2, resend=1, transmission=incomplete, cause=not_connected
@@ -1102,29 +1106,29 @@ time=4840, port=1, receive=1
 time=4840, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=4840, port=3, resend=1, transmission=successfully
 
-time=4850, port=1, receive=1
-time=4850, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4850, port=3, resend=1, transmission=successfully
+time=4850, port=1, receive=0
+time=4850, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4850, port=3, resend=0, transmission=successfully
 
-time=4860, port=1, receive=0
-time=4860, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4860, port=3, resend=0, transmission=successfully
+time=4860, port=1, receive=1
+time=4860, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4860, port=3, resend=1, transmission=successfully
 
-time=4870, port=1, receive=1
-time=4870, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4870, port=3, resend=1, transmission=successfully
+time=4870, port=1, receive=0
+time=4870, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4870, port=3, resend=0, transmission=successfully
 
-time=4880, port=1, receive=0
-time=4880, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4880, port=3, resend=0, transmission=successfully
+time=4880, port=1, receive=1
+time=4880, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4880, port=3, resend=1, transmission=successfully
 
 time=4890, port=1, receive=1
 time=4890, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=4890, port=3, resend=1, transmission=successfully
 
-time=4900, port=1, receive=1
-time=4900, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4900, port=3, resend=1, transmission=successfully
+time=4900, port=1, receive=0
+time=4900, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4900, port=3, resend=0, transmission=successfully
 
 time=4910, port=1, receive=0
 time=4910, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1150,13 +1154,13 @@ time=4960, port=1, receive=0
 time=4960, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=4960, port=3, resend=0, transmission=successfully
 
-time=4970, port=1, receive=0
-time=4970, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=4970, port=3, resend=0, transmission=successfully
+time=4970, port=1, receive=1
+time=4970, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=4970, port=3, resend=1, transmission=successfully
 
-time=4980, port=1, receive=1
-time=4980, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=4980, port=3, resend=1, transmission=successfully
+time=4980, port=1, receive=0
+time=4980, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=4980, port=3, resend=0, transmission=successfully
 
 time=4990, port=1, receive=0
 time=4990, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1182,21 +1186,21 @@ time=5040, port=1, receive=0
 time=5040, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5040, port=3, resend=0, transmission=successfully
 
-time=5050, port=1, receive=0
-time=5050, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5050, port=3, resend=0, transmission=successfully
+time=5050, port=1, receive=1
+time=5050, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5050, port=3, resend=1, transmission=successfully
 
-time=5060, port=1, receive=1
-time=5060, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5060, port=3, resend=1, transmission=successfully
+time=5060, port=1, receive=0
+time=5060, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5060, port=3, resend=0, transmission=successfully
 
-time=5070, port=1, receive=0
-time=5070, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5070, port=3, resend=0, transmission=successfully
+time=5070, port=1, receive=1
+time=5070, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5070, port=3, resend=1, transmission=successfully
 
-time=5080, port=1, receive=1
-time=5080, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5080, port=3, resend=1, transmission=successfully
+time=5080, port=1, receive=0
+time=5080, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5080, port=3, resend=0, transmission=successfully
 
 time=5090, port=1, receive=0
 time=5090, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1206,13 +1210,13 @@ time=5100, port=1, receive=0
 time=5100, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5100, port=3, resend=0, transmission=successfully
 
-time=5110, port=1, receive=0
-time=5110, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5110, port=3, resend=0, transmission=successfully
+time=5110, port=1, receive=1
+time=5110, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5110, port=3, resend=1, transmission=successfully
 
-time=5120, port=1, receive=1
-time=5120, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5120, port=3, resend=1, transmission=successfully
+time=5120, port=1, receive=0
+time=5120, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5120, port=3, resend=0, transmission=successfully
 
 time=5130, port=1, receive=0
 time=5130, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1222,13 +1226,13 @@ time=5140, port=1, receive=0
 time=5140, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5140, port=3, resend=0, transmission=successfully
 
-time=5150, port=1, receive=0
-time=5150, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5150, port=3, resend=0, transmission=successfully
+time=5150, port=1, receive=1
+time=5150, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5150, port=3, resend=1, transmission=successfully
 
-time=5160, port=1, receive=1
-time=5160, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5160, port=3, resend=1, transmission=successfully
+time=5160, port=1, receive=0
+time=5160, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5160, port=3, resend=0, transmission=successfully
 
 time=5170, port=1, receive=0
 time=5170, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1238,13 +1242,13 @@ time=5180, port=1, receive=0
 time=5180, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5180, port=3, resend=0, transmission=successfully
 
-time=5190, port=1, receive=0
-time=5190, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5190, port=3, resend=0, transmission=successfully
+time=5190, port=1, receive=1
+time=5190, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5190, port=3, resend=1, transmission=successfully
 
-time=5200, port=1, receive=1
-time=5200, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5200, port=3, resend=1, transmission=successfully
+time=5200, port=1, receive=0
+time=5200, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5200, port=3, resend=0, transmission=successfully
 
 time=5210, port=1, receive=0
 time=5210, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1254,13 +1258,13 @@ time=5220, port=1, receive=0
 time=5220, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5220, port=3, resend=0, transmission=successfully
 
-time=5230, port=1, receive=0
-time=5230, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5230, port=3, resend=0, transmission=successfully
+time=5230, port=1, receive=1
+time=5230, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5230, port=3, resend=1, transmission=successfully
 
-time=5240, port=1, receive=1
-time=5240, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5240, port=3, resend=1, transmission=successfully
+time=5240, port=1, receive=0
+time=5240, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5240, port=3, resend=0, transmission=successfully
 
 time=5250, port=1, receive=0
 time=5250, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1278,33 +1282,33 @@ time=5280, port=1, receive=0
 time=5280, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5280, port=3, resend=0, transmission=successfully
 
-time=5290, port=1, receive=0
-time=5290, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5290, port=3, resend=0, transmission=successfully
+time=5290, port=1, receive=1
+time=5290, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5290, port=3, resend=1, transmission=successfully
 
-time=5300, port=1, receive=1
-time=5300, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5300, port=3, resend=1, transmission=successfully
+time=5300, port=1, receive=0
+time=5300, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5300, port=3, resend=0, transmission=successfully
 
-time=5310, port=1, receive=0
-time=5310, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5310, port=3, resend=0, transmission=successfully
+time=5310, port=1, receive=1
+time=5310, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5310, port=3, resend=1, transmission=successfully
 
-time=5320, port=1, receive=1
-time=5320, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5320, port=3, resend=1, transmission=successfully
+time=5320, port=1, receive=0
+time=5320, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5320, port=3, resend=0, transmission=successfully
 
-time=5330, port=1, receive=0
-time=5330, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5330, port=3, resend=0, transmission=successfully
+time=5330, port=1, receive=1
+time=5330, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5330, port=3, resend=1, transmission=successfully
 
 time=5340, port=1, receive=1
 time=5340, port=2, resend=1, transmission=incomplete, cause=not_connected
 time=5340, port=3, resend=1, transmission=successfully
 
-time=5350, port=1, receive=1
-time=5350, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5350, port=3, resend=1, transmission=successfully
+time=5350, port=1, receive=0
+time=5350, port=2, resend=0, transmission=incomplete, cause=not_connected
+time=5350, port=3, resend=0, transmission=successfully
 
 time=5360, port=1, receive=0
 time=5360, port=2, resend=0, transmission=incomplete, cause=not_connected
@@ -1314,17 +1318,13 @@ time=5370, port=1, receive=0
 time=5370, port=2, resend=0, transmission=incomplete, cause=not_connected
 time=5370, port=3, resend=0, transmission=successfully
 
-time=5380, port=1, receive=0
-time=5380, port=2, resend=0, transmission=incomplete, cause=not_connected
-time=5380, port=3, resend=0, transmission=successfully
+time=5380, port=1, receive=1
+time=5380, port=2, resend=1, transmission=incomplete, cause=not_connected
+time=5380, port=3, resend=1, transmission=successfully
 
-time=5390, port=1, receive=1
-time=5390, port=2, resend=1, transmission=incomplete, cause=not_connected
-time=5390, port=3, resend=1, transmission=successfully
-
-time=5400, port=1, receive=null, cause=data_ended
-time=5400, port=2, resend=null, cause=data_ended, transmission=incomplete, cause=not_connected
-time=5400, port=3, resend=null, cause=data_ended, transmission=successfully
+time=5390, port=1, receive=null, cause=data_ended
+time=5390, port=2, resend=null, cause=data_ended, transmission=incomplete, cause=not_connected
+time=5390, port=3, resend=null, cause=data_ended, transmission=successfully
 
 time=6700, port=3, receive=1
 time=6700, port=1, resend=1, transmission=successfully

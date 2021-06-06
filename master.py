@@ -1,6 +1,5 @@
 from instructions import Layer, send, Instruction, create, connect, disconnect, mac, send_frame
-from objects import Data
-from switch import Host, Switch
+from switch import Host, Data, Switch
 
 
 def master(signal_time: int, error_detection: str, instructions: list):
@@ -26,6 +25,7 @@ def master(signal_time: int, error_detection: str, instructions: list):
                 j += 1
             i = j
         time += 1
+    write(layer.devices)
     return time
 
 
@@ -56,3 +56,16 @@ def controller(layer: Layer, instruction: Instruction):
         print(" {}".format(instruction.details[i]), end="")
     print()
     return sent
+
+
+def write(devices: list):
+    devices.sort()
+    file = open("output/devices.bin", 'a')
+    for device in devices:
+        file.write("device={}, name={}".format(str(type(device)).split('\'')[1].split('.')[0], device.name))
+        if type(device) != Host:
+            file.write(", ports_number={}".format(device.ports_number))
+        else:
+            file.write(", mac={}".format(device.mac))
+        file.write("\n")
+    file.close()

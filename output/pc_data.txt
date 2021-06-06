@@ -1,2 +1,2 @@
 time=957, host_mac=F2D2, data=11112222, state=OK
-time=7810, host_mac=F2D2, data=01234567, state=OK
+time=7800, host_mac=F2D2, data=01234567, state=OK
